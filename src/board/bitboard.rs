@@ -17,7 +17,6 @@ pub fn pop_bit(bitboard: &mut Bitboard, sqaure: impl Into<u64>) {
     *bitboard &= !(1 << sqaure.into())
 }
 
-#[repr(u64)]
 #[derive(Copy, Clone, Debug, PartialEq, Eq)]
 pub enum Square {
     A8,
@@ -86,9 +85,9 @@ pub enum Square {
     H1,
 }
 
-impl From<Square> for Bitboard {
-    fn from(square: Square) -> Bitboard {
-        square as Bitboard
+impl From<Square> for u64 {
+    fn from(square: Square) -> u64 {
+        square as u64
     }
 }
 

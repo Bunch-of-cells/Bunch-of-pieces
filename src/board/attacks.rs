@@ -1,7 +1,3 @@
-// pub const PAWN_ATTACKS: [[u64; 64]; 2] = [
-
-// ];
-
 use lazy_static::lazy_static;
 use std::ops::{Index, IndexMut};
 
